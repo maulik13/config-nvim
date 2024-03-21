@@ -116,6 +116,18 @@ return {
 		},
 	},
 
+	-- statusline
+	{
+		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
+		opts = {
+			options = {
+				-- globalstatus = false,
+				theme = "solarized_dark",
+			},
+		},
+	},
+
 	-- filename
 	{
 		"b0o/incline.nvim",
