@@ -1,7 +1,30 @@
 local groups = require('bufferline.groups')
 
+local hl_list = {}
+for i, color in pairs({ '#662121', '#767621', '#216631', '#325a5e', '#324b7b', '#562155' }) do
+	local name = 'IndentBlanklineIndent' .. i
+	vim.api.nvim_set_hl(0, name, { fg = color })
+	table.insert(hl_list, name);
+end
 
 return {
+	{
+		"nvimdev/dashboard-nvim",
+		event = "VimEnter",
+		opts = function(_, opts)
+			local logo = [[
+██████╗ ██╗ █████╗ ██████╗ ██╗      ██████╗  ██████╗
+██╔══██╗██║██╔══██╗██╔══██╗██║     ██╔═══██╗██╔════╝
+██║  ██║██║███████║██████╔╝██║     ██║   ██║██║  ███╗
+██║  ██║██║██╔══██║██╔══██╗██║     ██║   ██║██║   ██║
+██████╔╝██║██║  ██║██████╔╝███████╗╚██████╔╝╚██████╔╝
+╚═════╝ ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝
+      ]]
+
+			logo = string.rep("\n", 8) .. logo .. "\n\n"
+			opts.config.header = vim.split(logo, "\n")
+		end,
+	},
 	-- messages, cmdline and the popupmenu
 	{
 		"folke/noice.nvim",
@@ -79,28 +102,16 @@ return {
 		"akinsho/bufferline.nvim",
 		event = "VeryLazy",
 		keys = {
-			{ "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+			{ "<Tab>",   "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
 			{ "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
 		},
 		opts = {
 			options = {
-        always_show_bufferline = true,
+				always_show_bufferline = true,
 				indicator_icon = "▎",
-				
+
 				show_buffer_close_icons = true,
 				show_close_icon = false
-			},
-		},
-	},
-
-	-- statusline
-	{
-		"nvim-lualine/lualine.nvim",
-		event = "VeryLazy",
-		opts = {
-			options = {
-				-- globalstatus = false,
-				theme = "solarized_dark",
 			},
 		},
 	},
@@ -148,23 +159,5 @@ return {
 			},
 		},
 		keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
-	},
-
-	{
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
-		opts = function(_, opts)
-			local logo = [[
-██████╗ ██╗ █████╗ ██████╗ ██╗      ██████╗  ██████╗ 
-██╔══██╗██║██╔══██╗██╔══██╗██║     ██╔═══██╗██╔════╝ 
-██║  ██║██║███████║██████╔╝██║     ██║   ██║██║  ███╗
-██║  ██║██║██╔══██║██╔══██╗██║     ██║   ██║██║   ██║
-██████╔╝██║██║  ██║██████╔╝███████╗╚██████╔╝╚██████╔╝
-╚═════╝ ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝
-      ]]
-
-			logo = string.rep("\n", 8) .. logo .. "\n\n"
-			opts.config.header = vim.split(logo, "\n")
-		end,
 	},
 }
