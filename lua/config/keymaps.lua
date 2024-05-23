@@ -34,3 +34,6 @@ keymap.set("n", "<S-Right>", "<cmd>vertical resize -5<cr>", { desc = "Increase w
 -- Disable to allow default VIM keybindings
 keymap.del("n", "<S-h>")
 keymap.del("n", "<S-l>")
+
+-- Selection
+keymap.set("n", "<C-a>", "ggVG", { desc = "Select all the lines" })
