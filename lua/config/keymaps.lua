@@ -25,7 +25,7 @@ keymap.set("n", "sh", "<C-w>h")
 keymap.set("n", "sk", "<C-w>k")
 keymap.set("n", "sj", "<C-w>j")
 keymap.set("n", "sl", "<C-w>l")
--- Resize window using <ctrl> arrow keys
+-- Resize window using <shift> arrow keys
 keymap.set("n", "<S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 keymap.set("n", "<S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
 keymap.set("n", "<S-Left>", "<cmd>vertical resize +5<cr>", { desc = "Decrease window width" })
