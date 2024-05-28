@@ -9,31 +9,25 @@ discipline.cowboy()
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Disable continuations
-keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
-keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
-
 -- New tab
-keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
--- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+
 -- Resize window using <shift> arrow keys
 keymap.set("n", "<S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 keymap.set("n", "<S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
 keymap.set("n", "<S-Left>", "<cmd>vertical resize +5<cr>", { desc = "Decrease window width" })
 keymap.set("n", "<S-Right>", "<cmd>vertical resize -5<cr>", { desc = "Increase window width" })
 
--- Disable to allow default VIM keybindings
-keymap.del("n", "<S-h>")
-keymap.del("n", "<S-l>")
-
 -- Selection
-keymap.set("n", "<C-a>", "ggVG", { desc = "Select all the lines" })
+keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
+
+-- Disable some keymaps
+keymap.del("n", "<S-h>") -- Switch to previous buffer
+keymap.del("n", "<S-l>") -- Switch to next buffer
+keymap.del("n", "<leader>`") -- Switch to Other Buffer
+keymap.del("n", "<leader>K") -- "<cmd>norm! K<cr>", { desc = "Keywordprg" })
