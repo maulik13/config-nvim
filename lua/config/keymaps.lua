@@ -24,7 +24,7 @@ keymap.set("n", "<S-Left>", "<cmd>vertical resize +5<cr>", { desc = "Decrease wi
 keymap.set("n", "<S-Right>", "<cmd>vertical resize -5<cr>", { desc = "Increase window width" })
 
 -- Selection
-keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
+keymap.set("n", "aa", "ggVG", { desc = "Select all" })
 
 -- Disable some keymaps
 keymap.del("n", "<S-h>") -- Switch to previous buffer
