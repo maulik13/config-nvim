@@ -1,21 +1,51 @@
-return {
-  {
-    "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    opts = function(_, opts)
-      local logo = [[
-██████╗ ██╗ █████╗ ██████╗ ██╗      ██████╗  ██████╗ 
-██╔══██╗██║██╔══██╗██╔══██╗██║     ██╔═══██╗██╔═══██╗
-██║  ██║██║███████║██████╔╝██║     ██║   ██║██║   ██║
-██║  ██║██║██╔══██║██╔══██╗██║     ██║   ██║██║▄▄ ██║
-██████╔╝██║██║  ██║██████╔╝███████╗╚██████╔╝╚██████╔╝
-╚═════╝ ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝  ╚══▀▀═╝ 
-     ]]
+local header = {
+  [[                                                                   ]],
+  [[      ████ ██████           █████      ██                    ]],
+  [[     ███████████             █████                            ]],
+  [[     █████████ ███████████████████ ███   ███████████  ]],
+  [[    █████████  ███    █████████████ █████ ██████████████  ]],
+  [[   █████████ ██████████ █████████ █████ █████ ████ █████  ]],
+  [[ ███████████ ███    ███ █████████ █████ █████ ████ █████ ]],
+  [[██████  █████████████████████ ████ █████ █████ ████ ██████]],
+}
 
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
-    end,
-  },
+local function colorize_header()
+  local catppuccin = require("catppuccin.palettes").get_palette()
+  local colors = {
+    catppuccin.red,
+    catppuccin.red,
+    catppuccin.peach,
+    catppuccin.yellow,
+    catppuccin.green,
+    catppuccin.sky,
+    catppuccin.blue,
+    catppuccin.mauve,
+    catppuccin.overlay0,
+  }
+  for i, color in pairs(colors) do
+    local cmd = "hi StartLogo" .. i .. " guifg=" .. color
+    vim.cmd(cmd)
+  end
+
+  local lines = {}
+
+  for i, chars in pairs(header) do
+    local line = {
+      type = "text",
+      val = chars,
+      opts = {
+        hl = "StartLogo" .. i,
+        shrink_margin = false,
+        position = "center",
+      },
+    }
+    print(vim.inspect(line))
+    table.insert(lines, line)
+  end
+  return lines
+end
+
+return {
   {
     "rcarriga/nvim-notify",
     opts = {
@@ -28,7 +58,7 @@ return {
     event = "VeryLazy",
     opts = function(_, opts)
       opts.scroll = {
-        enable = false,
+        enable = true,
       }
     end,
   },
