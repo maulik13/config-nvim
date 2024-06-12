@@ -9,6 +9,9 @@ discipline.cowboy()
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Bufferline
+keymap.set("n", "<leader>bk", ":BufferLinePick<cr>", { desc = "Pick buffer" })
+
 -- New tab
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)

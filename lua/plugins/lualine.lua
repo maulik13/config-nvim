@@ -4,8 +4,7 @@ return {
   event = "VeryLazy",
   opts = {
     options = {
-      -- globalstatus = false,
-      -- theme = "catppuccin-frappe",
+      theme = "catppuccin",
     },
   },
 }

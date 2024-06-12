@@ -2,7 +2,14 @@ return {
   "catppuccin/nvim",
   lazy = true,
   name = "catppuccin",
+  priority = 1000,
   opts = {
+    flavour = "auto",
+    background = {
+      light = "latte",
+      dark = "mocha",
+    },
+    -- transparent_background = true,
     no_bold = false,
     integrations = {
       harpoon = true,
@@ -45,8 +52,12 @@ return {
       end,
     },
     color_overrides = {
-      mocha = {
-      },
+      mocha = {},
     },
+    custom_highlights = function(colors)
+      return {
+        MsgSeparator = { bg = colors.mantle },
+      }
+    end,
   },
 }

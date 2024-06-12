@@ -48,6 +48,11 @@ return {
           end)
         end,
       },
+      diagnostics = {
+        float = {
+          border = "rounded",
+        },
+      },
     },
   },
 }
