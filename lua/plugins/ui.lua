@@ -11,7 +11,7 @@ return {
     event = "VeryLazy",
     opts = function(_, opts)
       opts.scroll = {
-        enable = true,
+        enable = false,
       }
     end,
   },
