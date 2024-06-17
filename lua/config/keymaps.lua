@@ -13,8 +13,8 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<leader>bk", ":BufferLinePick<cr>", { desc = "Pick buffer" })
 
 -- New tab
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "]<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "[<tab>", ":tabprev<Return>", opts)
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
