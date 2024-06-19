@@ -23,8 +23,10 @@ keymap.set("n", "sv", ":vsplit<Return>", opts)
 -- Resize window using <shift> arrow keys
 keymap.set("n", "<S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 keymap.set("n", "<S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-keymap.set("n", "<S-Left>", "<cmd>vertical resize +5<cr>", { desc = "Decrease window width" })
-keymap.set("n", "<S-Right>", "<cmd>vertical resize -5<cr>", { desc = "Increase window width" })
+keymap.set("n", "<S-Left>", "<cmd>vertical resize +5<cr>", { desc = "Decrease window width by 5" })
+keymap.set("n", "<M-Left>", "<cmd>vertical resize +10<cr>", { desc = "Decrease window width by 10" })
+keymap.set("n", "<S-Right>", "<cmd>vertical resize -5<cr>", { desc = "Increase window width by 5" })
+keymap.set("n", "<M-Right>", "<cmd>vertical resize -10<cr>", { desc = "Increase window width by 10" })
 
 -- Selection
 keymap.set("n", "aa", "ggVG", { desc = "Select all" })
