@@ -4,9 +4,7 @@ return {
     suggestion = {
       enabled = true,
       auto_trigger = true,
-      keymap = {
-        accept = "<TAB>",
-      },
+      hide_during_completion = true,
     },
     panel = {
       enabled = true,
