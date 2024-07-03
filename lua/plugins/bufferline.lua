@@ -2,11 +2,12 @@
 local function getHighlights()
   local C = require("catppuccin.palettes").get_palette("macchiato")
   local O = require("catppuccin").options
-  local transparent_background = O.transparent_background
+  -- transparent background from options is not working
+  local transparent_background = true -- O.transparent_background
   local active_bg = transparent_background and "NONE" or C.crust
   local inactive_bg = transparent_background and "NONE" or C.base
   local separator_fg = O.transparent_background or C.crust
-  local inactive_fg = C.surface2
+  local inactive_fg = C.subtext0
   local styles = { "bold", "italic" }
   local active_sp = C.red
   local inactive_sp = C.flamingo
