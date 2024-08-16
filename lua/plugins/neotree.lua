@@ -1,7 +1,6 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
-    window = {},
     filesystem = {
       filtered_items = {
         visible = false,

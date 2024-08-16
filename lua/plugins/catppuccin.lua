@@ -55,8 +55,32 @@ return {
       mocha = {},
     },
     custom_highlights = function(colors)
+      local U = require("catppuccin.utils.colors")
+      -- vim.api.nvim_set_hl(0, "@markup.italic", { })
+
       return {
         MsgSeparator = { bg = colors.mantle },
+        -- Highlight for markdown
+        RenderMarkdownH1 = { fg = colors.teal, style = { "bold" } },
+        RenderMarkdownH1Bg = { bg = U.darken(colors.teal, 0.3, colors.base) },
+        RenderMarkdownH2 = { fg = colors.yellow, style = { "bold" } },
+        RenderMarkdownH2Bg = { bg = U.darken(colors.yellow, 0.2, colors.base) },
+        RenderMarkdownH3 = { fg = colors.mauve, style = { "bold" } },
+        RenderMarkdownH3Bg = { bg = U.darken(colors.mauve, 0.3, colors.base) },
+        RenderMarkdownH4 = { fg = colors.flamingo },
+        RenderMarkdownH4Bg = { bg = U.darken(colors.flamingo, 0.15, colors.base) },
+        RenderMarkdownH5 = { fg = colors.blue },
+        RenderMarkdownH5Bg = { bg = U.darken(colors.blue, 0.15, colors.base) },
+        RenderMarkdownH6 = { fg = colors.lavender },
+        RenderMarkdownH6Bg = { bg = U.darken(colors.lavender, 0.15, colors.base) },
+
+        RenderMarkdownBullet = { fg = colors.peach },
+        RenderMarkdownQuote = { fg = colors.blue },
+
+        MarkdownLinkLabel = { fg = colors.blue },
+        MarkdownQuoteText = { fg = colors.lavender },
+        ["@markup.strong"] = { fg = colors.mauve, style = { "bold" } },
+        ["@markup.italic"] = { fg = colors.mauve, style = { "italic" } },
       }
     end,
   },
