@@ -42,12 +42,20 @@ return {
       which_key = true,
     },
     highlight_overrides = {
-      all = function(colors)
+      all = function(C)
         return {
-          DiagnosticVirtualTextError = { bg = colors.none },
-          DiagnosticVirtualTextWarn = { bg = colors.none },
-          DiagnosticVirtualTextHint = { bg = colors.none },
-          DiagnosticVirtualTextInfo = { bg = colors.none },
+          DiagnosticVirtualTextError = { bg = C.none },
+          DiagnosticVirtualTextWarn = { bg = C.none },
+          DiagnosticVirtualTextHint = { bg = C.none },
+          DiagnosticVirtualTextInfo = { bg = C.none },
+        }
+      end,
+      macchiato = function(macchiato)
+        local U = require("catppuccin.utils.colors")
+        return {
+          CursorLine = {
+            bg = U.darken(macchiato.pink, 0.11, macchiato.base),
+          },
         }
       end,
     },

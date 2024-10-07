@@ -1,7 +1,11 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
+  lazy = false,
   name = "markdown.nvim",
+  priority = 1000,
   opts = {
+    file_types = { "markdown", "Avante" },
+    ft = { "markdown", "Avante" },
     pipe_table = { preset = "round" },
     code = {
       sign = true,
