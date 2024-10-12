@@ -7,6 +7,6 @@ return {
     { "nvim-tree/nvim-web-devicons" },
   },
   opts = {
-    default_to_projects_v2 = true,
+    default_to_projects_v2 = false,
   },
 }
