@@ -5,7 +5,6 @@ return {
   priority = 1000,
   opts = {
     file_types = { "markdown", "Avante" },
-    ft = { "markdown", "Avante" },
     pipe_table = { preset = "round" },
     code = {
       sign = true,
@@ -16,6 +15,5 @@ return {
       icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
       min_width = 90,
     },
-    background = {},
   },
 }
