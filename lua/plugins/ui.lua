@@ -13,6 +13,9 @@ return {
       opts.scroll = {
         enable = false,
       }
+      opts.cursor = {
+        enable = false,
+      }
     end,
   },
   {
