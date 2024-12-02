@@ -12,7 +12,7 @@ return {
     transparent_background = true,
     no_bold = false,
     integrations = {
-      harpoon = true,
+      bufferline = true,
       fidget = true,
       cmp = true,
       flash = true,
@@ -65,7 +65,6 @@ return {
     custom_highlights = function(colors)
       local U = require("catppuccin.utils.colors")
       -- vim.api.nvim_set_hl(0, "@markup.italic", { })
-
       return {
         MsgSeparator = { bg = colors.mantle },
         -- Highlight for markdown
@@ -89,6 +88,7 @@ return {
         MarkdownQuoteText = { fg = colors.lavender },
         ["@markup.strong"] = { fg = colors.mauve, style = { "bold" } },
         ["@markup.italic"] = { fg = colors.mauve, style = { "italic" } },
+        CursorLineNr = { fg = colors.teal, style = { "bold" } },
       }
     end,
   },

@@ -87,38 +87,15 @@ end
 return {
   "akinsho/bufferline.nvim",
   event = "VeryLazy",
-  dependencies = {
-    "catppuccin/nvim",
-  },
-  keys = {
-    -- { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
-    -- { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
-  },
   opts = {
     options = {
       themable = true,
-      always_show_bufferline = true,
+      always_show_bufferline = false,
       show_buffer_close_icons = true,
       show_close_icon = false,
-      -- numbers = function(opts)
-      --   return string.format("%s", opts.raise(opts.ordinal))
-      -- end,
-      indicator = {
-        style = "underline",
-      },
-      -- This does not work due to a bug, will wait or fix this later
-      -- separator_style = { "", "" },
-      -- separator_style = { "", "" },
-      -- separator_style = { "", "" },
-
-      -- separator_style = "slant",
-      offsets = {
-        {
-          filetype = "neo-tree",
-          text_align = "left",
-          text = "Explorer",
-        },
-      },
+      numbers = function(opts)
+        return string.format("%s", opts.raise(opts.ordinal))
+      end,
     },
     highlights = getHighlights(),
   },

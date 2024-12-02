@@ -1,5 +1,6 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
+  lazy = false,
   name = "markdown.nvim",
   priority = 1000,
   opts = {
