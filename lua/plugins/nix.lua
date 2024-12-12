@@ -1,11 +1,5 @@
 return {
   {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = { "nixfmt" },
-    },
-  },
-  {
     "neovim/nvim-lspconfig",
     ft = { "nix" },
     opts = {},
