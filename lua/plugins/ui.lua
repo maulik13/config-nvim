@@ -30,4 +30,21 @@ return {
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ui = {
+        border = "rounded",
+      },
+    },
+  },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      indent = {
+        char = "⋮",
+        only_scope = true,
+      },
+    },
+  },
 }
