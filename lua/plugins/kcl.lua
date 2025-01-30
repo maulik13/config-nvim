@@ -12,17 +12,10 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        kcl = {},
+        kcl = {
+          mason = false,
+        },
       },
     },
-    setup = {},
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = { ensure_installed = { "kcl" } },
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {},
   },
 }
