@@ -88,6 +88,11 @@ return {
         ["@markup.strong"] = { fg = colors.mauve, style = { "bold" } },
         ["@markup.italic"] = { fg = colors.mauve, style = { "italic" } },
         CursorLineNr = { fg = colors.teal, style = { "bold" } },
+        -- KCL specific highlights
+        ["@lsp.type.property.kcl"] = { fg = colors.blue },
+        ["@lsp.type.struct.kcl"] = { fg = colors.peach, style = { "bold" } },
+        ["@lsp.type.namespace.kcl"] = { fg = colors.rosewater, style = { "italic" } },
+        kclString = { fg = colors.teal, style = { "italic" } },
       }
     end,
   },

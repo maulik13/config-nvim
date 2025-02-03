@@ -1,12 +1,7 @@
-vim.filetype.add({
-  extension = {
-    k = "kcl",
-    kcl = "kcl",
-  },
-})
 return {
   {
     "kcl-lang/kcl.nvim",
+    ft = "kcl",
   },
   {
     "neovim/nvim-lspconfig",
