@@ -65,7 +65,11 @@ return {
       local U = require("catppuccin.utils.colors")
       -- vim.api.nvim_set_hl(0, "@markup.italic", { })
       return {
+        -- Global
+        String = { fg = colors.teal },
+        CursorLineNr = { fg = colors.sapphire, style = { "bold" } },
         MsgSeparator = { bg = colors.mantle },
+
         -- Highlight for markdown
         RenderMarkdownH1 = { fg = colors.teal, style = { "bold" } },
         RenderMarkdownH1Bg = { bg = U.darken(colors.teal, 0.3, colors.base) },
@@ -79,18 +83,16 @@ return {
         RenderMarkdownH5Bg = { bg = U.darken(colors.blue, 0.15, colors.base) },
         RenderMarkdownH6 = { fg = colors.lavender },
         RenderMarkdownH6Bg = { bg = U.darken(colors.lavender, 0.15, colors.base) },
-
         RenderMarkdownBullet = { fg = colors.peach },
         RenderMarkdownQuote = { fg = colors.blue },
-
         MarkdownLinkLabel = { fg = colors.blue },
         MarkdownQuoteText = { fg = colors.lavender },
         ["@markup.strong"] = { fg = colors.mauve, style = { "bold" } },
         ["@markup.italic"] = { fg = colors.mauve, style = { "italic" } },
-        CursorLineNr = { fg = colors.teal, style = { "bold" } },
+
         -- KCL specific highlights
         ["@lsp.type.property.kcl"] = { fg = colors.blue },
-        ["@lsp.type.struct.kcl"] = { fg = colors.peach, style = { "bold" } },
+        ["@lsp.type.struct.kcl"] = { fg = colors.peach },
         ["@lsp.type.namespace.kcl"] = { fg = colors.rosewater, style = { "italic" } },
         kclString = { fg = colors.teal, style = { "italic" } },
       }
