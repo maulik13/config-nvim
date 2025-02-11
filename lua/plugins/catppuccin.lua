@@ -4,11 +4,11 @@ return {
   name = "catppuccin",
   priority = 2000,
   opts = {
-    flavour = "auto",
-    background = {
-      light = "latte",
-      dark = "machhiato",
-    },
+    flavour = "macchiato",
+    -- background = {
+    --   light = "latte",
+    --   dark = "macchiato",
+    -- },
     transparent_background = true,
     no_bold = false,
     integrations = {
