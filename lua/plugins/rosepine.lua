@@ -4,5 +4,10 @@ return {
   opts = {
     variant = "auto",
     dark_variant = "moon",
+    styles = {
+      bold = true,
+      italic = true,
+      transparency = true,
+    },
   },
 }
