@@ -11,3 +11,11 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Set commentstring for KCL files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "kcl",
+  callback = function()
+    vim.bo.commentstring = "# %s"
+  end,
+})
+
