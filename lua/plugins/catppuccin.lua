@@ -12,7 +12,6 @@ return {
     transparent_background = true,
     no_bold = false,
     integrations = {
-      bufferline = true,
       fidget = true,
       cmp = true,
       flash = true,

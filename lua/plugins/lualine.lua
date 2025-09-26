@@ -1,7 +1,7 @@
 -- statusline
 return {
   "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
+  event = "Lazy",
   opts = {
     options = {
       -- theme = "rose-pine",

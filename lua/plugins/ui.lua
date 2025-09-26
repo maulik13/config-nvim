@@ -7,8 +7,8 @@ return {
   },
   -- animations
   {
-    "echasnovski/mini.animate",
-    event = "VeryLazy",
+    "nvim-mini/mini.animate",
+    event = "Lazy",
     opts = function(_, opts)
       opts.scroll = {
         enable = false,
@@ -31,7 +31,7 @@ return {
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ui = {
         border = "rounded",
