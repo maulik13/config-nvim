@@ -8,7 +8,7 @@ return {
   -- animations
   {
     "nvim-mini/mini.animate",
-    event = "Lazy",
+    lazy = true,
     opts = function(_, opts)
       opts.scroll = {
         enable = false,
@@ -44,6 +44,14 @@ return {
       indent = {
         char = "⋮",
         only_scope = true,
+      },
+    },
+    {
+      "nvim-lualine/lualine.nvim",
+      opts = {
+        options = {
+          theme = "catppuccin",
+        },
       },
     },
   },
