@@ -15,4 +15,14 @@ return {
       min_width = 90,
     },
   },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        markdownlint = {
+          args = { "--disable", "MD013", "--" },
+        },
+      },
+    },
+  },
 }
