@@ -5,7 +5,7 @@ return {
       servers = {},
       setup = {
         eslint = function()
-          require("lazyvim.util").lsp.on_attach(function(client)
+          Snacks.util.lsp.on({ name = "eslint" }, function(_, client)
             if client.name == "eslint" then
               client.server_capabilities.documentFormattingProvider = true
             elseif client.name == "tsserver" then
