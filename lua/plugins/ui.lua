@@ -1,5 +1,19 @@
 return {
   {
+    "akinsho/bufferline.nvim",
+    after = "catppuccin",
+    opts = function(_, opts)
+      local in_zellij = vim.env.ZELLIJ ~= nil
+      opts.options = vim.tbl_deep_extend("force", opts.options or {}, {
+        indicator = {
+          icon = " ",
+          style = in_zellij and "icon" or "underline",
+        },
+      })
+      opts.highlights = require("catppuccin.special.bufferline").get_theme()
+    end,
+  },
+  {
     "rcarriga/nvim-notify",
     opts = {
       timeout = 5000,
@@ -50,7 +64,7 @@ return {
       "nvim-lualine/lualine.nvim",
       opts = {
         options = {
-          theme = "catppuccin",
+          -- theme = "catppuccin",
         },
       },
     },
