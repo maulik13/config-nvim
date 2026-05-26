@@ -1,3 +1,1 @@
-vim.hl = vim.highlight
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+/nix/store/0m73kj322z75d6qmidq46fka01cz353p-home-manager-files/.config/nvim/init.lua
